@@ -1,9 +1,9 @@
+import { Injectable } from '@angular/core';
+
+import { PageResponse } from 'src/app/shared/models/page-response.model';
 import { BaseModel } from './../../shared/models/base.model';
 import { FiltersModel } from './../../shared/models/filters.model';
 import { StudentModel } from './../../shared/models/student.model';
-import { Injectable } from '@angular/core';
-import { PageResponse } from 'src/app/shared/models/page-response.model';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -159,7 +159,7 @@ export class BackendService {
     return nameClasses;
   }
 
-  getTest(): number[] {
+  getStudentsPerClasses(): number[] {
     let data = 0;
     const datas = [];
     this.classes.map(classToStudent => {

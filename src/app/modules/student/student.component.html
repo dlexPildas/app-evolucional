@@ -1,8 +1,7 @@
 <div class="container">
   <section class="grid">
-    <div class="list ">
+    <div class="list">
       <div class="header-list">
-
         <select [(ngModel)]="filters.classId" class="filters select">
           <option [value]="class.id" *ngFor="let class of classes">
             {{class.name}}
@@ -14,7 +13,6 @@
             {{degree.name}}
           </option>
         </select>
-
         <button class="button-search"  (click)="getStudents()" mat-raised-button >Search</button>
       </div>
 
@@ -28,7 +26,7 @@
         </div>
       </li>
 
-      <li *ngFor="let student of pageResponse?.items">
+      <li class="body-list" *ngFor="let student of pageResponse?.items">
         <span>{{student.ra}}</span>
         <span>{{student.name}}</span>
         <span>{{student.degreeId}}</span>

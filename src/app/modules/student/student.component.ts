@@ -1,9 +1,10 @@
+import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+
+import { FiltersModel } from 'src/app/shared/models/filters.model';
 import { BaseModel } from '../../shared/models/base.model';
 import { StudentModel } from '../../shared/models/student.model';
 import { BackendService } from '../../core/services/backend.service';
-import { Component, OnInit } from '@angular/core';
-import { FiltersModel } from 'src/app/shared/models/filters.model';
-import { MatDialog } from '@angular/material/dialog';
 import { FormStudentComponent } from './form/form-student.component';
 import { PageResponse } from 'src/app/shared/models/page-response.model';
 
@@ -55,7 +56,6 @@ export class StudentComponent implements OnInit {
 
   getStudents(pageActual: number = 1): void {
     this.pageResponse = this.backendService.getStudents(this.filters, pageActual);
-    // this.totalPages = this.students.length;
   }
 
   openFormStudent(id?: number): void {
@@ -75,7 +75,7 @@ export class StudentComponent implements OnInit {
   }
 
   getStudentsPerClasses(): void {
-    this.studentsPerClasses = this.backendService.getTest();
+    this.studentsPerClasses = this.backendService.getStudentsPerClasses();
   }
 
   generateRadomStudents(event: Event): void {

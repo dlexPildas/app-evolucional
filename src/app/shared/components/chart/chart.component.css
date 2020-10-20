@@ -1,0 +1,20 @@
+.chart-container {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading span {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 15px;
+}

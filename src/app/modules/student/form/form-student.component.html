@@ -1,0 +1,16 @@
+<div class="container">
+  <form [formGroup]="studentForm">
+
+    <select formControlName="classId" class="filters select full-width">
+      <option [value]="class.id" *ngFor="let class of classes">
+        {{class.name}}
+      </option>
+    </select>
+
+    <input class="filters input full-width" type="text" formControlName="name" >
+
+    <button class="full-width button-save" (click)="saveStudent()">Save</button>
+  </form>
+</div>
+
+

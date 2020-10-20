@@ -1,0 +1,9 @@
+<div class="chart-container">
+  <div *ngIf="isUpdating" class="loading">
+    <mat-spinner ></mat-spinner>
+    <span>loading datas...</span>
+  </div>
+
+  <chart *ngIf="!isUpdating" [type]="type" [data]="data" [options]="options"></chart>
+</div>
+

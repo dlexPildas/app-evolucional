@@ -1,0 +1,40 @@
+nav {
+  /* position: absolute;
+  top: 0;
+  width: 100%; */
+  display: flex;
+  background: #202024;
+  height: 100px
+}
+
+nav .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .header .actions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav .header .actions span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+  padding: 15px 7px;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  outline: none;
+}
+
+nav .header .actions span:hover {
+  background: #121214;
+  transition: .5s;
+}
+
+

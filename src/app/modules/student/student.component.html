@@ -1,0 +1,55 @@
+<div class="container">
+  <section class="grid">
+    <div class="list ">
+      <div class="header-list">
+
+        <select [(ngModel)]="filters.classId" class="filters select">
+          <option [value]="class.id" *ngFor="let class of classes">
+            {{class.name}}
+          </option>
+        </select>
+
+        <select [(ngModel)]="filters.degreeId" class="filters select">
+          <option [value]="degree.id" *ngFor="let degree of degrees">
+            {{degree.name}}
+          </option>
+        </select>
+
+        <button class="button-search"  (click)="getStudents()" mat-raised-button >Search</button>
+      </div>
+
+      <li class="header">
+        <span class="header">ra</span>
+        <span class="header">name</span>
+        <span class="header">degreeId</span>
+        <span class="header">classId</span>
+        <div class="actions">
+          <mat-icon>create</mat-icon>
+        </div>
+      </li>
+
+      <li *ngFor="let student of pageResponse?.items">
+        <span>{{student.ra}}</span>
+        <span>{{student.name}}</span>
+        <span>{{student.degreeId}}</span>
+        <span>{{student.classId}}</span>
+        <div class="actions">
+          <button class="backgroud-violet" mat-icon-button disabled aria-label="Example icon-button with a heart icon">
+            <mat-icon class="icon" (click)="openFormStudent(student.id)">create</mat-icon>
+          </button>
+        </div>
+      </li>
+
+      <app-paginator [totalPages]="pageResponse.totalPages" [pageActual]="pageActual" (getStudent)="getStudents($event)"></app-paginator>
+    </div>
+
+    <div class="chart">
+      <h1 style="text-align: center; color: #7159c1;">Charts</h1>
+      <app-chart  [labels]="nameClasses" [datas]="studentsPerClasses"></app-chart>
+    </div>
+  </section>
+</div>
+
+<button matTooltip="Gerenate radom students" (click)="generateRadomStudents($event)" class="button-more" mat-fab aria-label="Example icon button with a home icon">
+  <mat-icon>add</mat-icon>
+</button>

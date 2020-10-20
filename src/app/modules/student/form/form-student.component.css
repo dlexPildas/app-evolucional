@@ -1,0 +1,35 @@
+.container {
+  background: #121214;
+}
+
+form {
+  padding: 15px;
+}
+
+input {
+  height: 48px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 10px;
+    border: 0;
+  margin-top: 15px;
+}
+
+.button-save {
+  background: #7159c1;
+  color: #fff;
+  height: 48px;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+
+.button-save:hover {
+  opacity: .9;
+}
+

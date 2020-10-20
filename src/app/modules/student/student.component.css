@@ -1,0 +1,129 @@
+.container {
+}
+
+.container .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+.container section {
+  padding: 10px;
+}
+
+.container section .list {
+  list-style: none;
+  width: 100%;
+  max-width: 1000px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #121214;
+  /* border: 2px solid #04d361; */
+  border-radius: 10px;
+}
+
+.container section .list .filters {
+  margin: 14px 0px;
+}
+
+.container section .list .header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #7159c1; */
+  padding: 8px;
+  border-radius: 5px;
+  /* box-shadow: 2px 2px 2px rgb(0, 0, 0, .4); */
+}
+
+.container section .list .header-list .icon {
+  font-size: 28px;
+}
+
+.container section .list .header-list span {
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.container section .list li {
+  flex: 1;
+  display: flex;
+  background: #202024;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.container section .list li:hover {
+  transform: translate(7px, -3px);
+  transition: 0.5s;
+}
+
+.container section .list li span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.container section .chart {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 15px auto;
+  padding: 10px;
+  background: #202024;
+  border: 2px solid #04d361;
+}
+
+.container section .chart:hover {
+  transform: translate(7px, -3px);
+  transition: 0.1s;
+}
+
+.icon {
+  background: #7159c1;
+  border-radius: 50%;
+  color: #fff;
+  padding: 2px;
+}
+
+.icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container-generate-students {
+  margin-top: 5px;
+  text-align: end;
+}
+
+.button-more {
+  position: fixed;
+  background: #7159c1;
+  z-index: 100000;
+  bottom: 50px;
+  right: 50px;
+}
+
+.backgroud-violet {
+  background: #7159c1 !important;
+}
+
+.header {
+  color: #7159c1;
+}
+
+.header:hover {
+  transform: translate(0px, 0px);
+  transition: 0.1s;
+}

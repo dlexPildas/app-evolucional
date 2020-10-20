@@ -1,0 +1,48 @@
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+.paginator .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paginator span {
+  margin-top: 5px;
+  color: #fff;
+}
+
+.paginator span small {
+  color: #7159c1;
+  font-weight: bold;
+}
+
+.pageActual {
+  background: #202024;
+  border: 0;
+  height: 24px;
+  border-radius: 10px;
+  max-width: 50px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.icon {
+  background: #7159c1;
+  border-radius: 50%;
+  color: #fff;
+  padding: 2px;
+  outline: none;
+}
+
+.icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

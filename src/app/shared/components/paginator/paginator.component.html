@@ -1,0 +1,9 @@
+<div class="paginator">
+  <div class="actions">
+    <mat-icon (click)="back()" class="icon">keyboard_arrow_left</mat-icon>
+    <input [disabled]="true" [(ngModel)]="pageActual" class="pageActual" type="number">
+    <mat-icon (click)="advance()" class="icon">keyboard_arrow_right</mat-icon>
+  </div>
+
+  <span>Total pages: <small>{{totalPages}}</small></span>
+</div>

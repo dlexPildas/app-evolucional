@@ -1,0 +1,23 @@
+<div class="container">
+  <section class="grid">
+    <div class="list">
+      <div class="header-list">
+        <select [(ngModel)]="filters.classId" class="filters select">
+          <option [value]="class.id" *ngFor="let class of classes">
+            {{class.name}}
+          </option>
+        </select>
+
+        <select [(ngModel)]="filters.degreeId" class="filters select">
+          <option [value]="degree.id" *ngFor="let degree of degrees">
+            {{degree.name}}
+          </option>
+        </select>
+
+        <button class="button-search" mat-raised-button>Search</button>
+
+        <!-- <button class="full-width"  style="max-width: 100px;" (click)="0" mat-raised-button color="secondary">Search</button> -->
+      </div>
+    </div>
+  </section>
+</div>
